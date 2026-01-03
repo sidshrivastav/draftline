@@ -13,6 +13,8 @@ struct Cli {
 enum Commands {
     /// Print hello message
     Hello,
+    Index,
+    Expand
 }
 
 fn main() {
@@ -21,6 +23,12 @@ fn main() {
     match cli.command {
         Some(Commands::Hello) => {
             println!("Hello from Draftline 👋");
+        }
+        Some(Commands::Index) => {
+            println!("Ran index!");
+        }
+        Some(Commands::Expand) => {
+            println!("Ran expand!");
         }
         None => {
             println!("Hello from Draftline 👋");
